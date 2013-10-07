@@ -24,13 +24,25 @@ public class Lab01 {
             public void push(int element) {
                 top++;
                 data[top] = element;
+                //trqbva da ima proverka
             }
 
             public int pop() {
                 int value = data[top];
                 top--;
                 return value;
+            }
 
+            public int peek() {
+                return data[top];
+            }
+
+            public int size() {
+                return top + 1;
+            }
+
+            public void clear() {
+                top = -1;
             }
         }
     }
