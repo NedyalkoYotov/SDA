@@ -1,0 +1,37 @@
+package lab01;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author NedyalkoYotov
+ */
+public class Lab01 {
+
+    public static void main(String[] args) {
+        // (2 + (3 *5)) 
+        class MyStack {
+
+            private int maxSize = 100;
+            private int top;
+            private int[] data;
+
+            public MyStack() {
+                top = -1;
+                data = new int[maxSize];
+            }
+
+            public void push(int element) {
+                top++;
+                data[top] = element;
+            }
+
+            public int pop() {
+                int value = data[top];
+                top--;
+                return value;
+
+            }
+        }
+    }
+}
