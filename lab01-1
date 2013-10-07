@@ -1,0 +1,25 @@
+package lab01;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author NedyalkoYotov
+ */
+public class Lab01 {
+
+    public static void main(String[] args) {
+        // First Hello word!
+        int a,b,c,d;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Number 1");
+        int firstNumber = input.nextInt();
+        System.out.println("Number 2");
+        int secondNumber = input.nextInt();
+        a = firstNumber + secondNumber;
+        b = firstNumber - secondNumber;
+        c = firstNumber * secondNumber;
+        d = firstNumber / secondNumber;
+        System.out.println("first + second "+ a+ " first - second " +b + " first * second  " + c + " first / second "+ d);
+    }
+}
