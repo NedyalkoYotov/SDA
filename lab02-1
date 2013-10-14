@@ -1,0 +1,65 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab02fmi;
+
+/**
+ *
+ * @author NedYotoff
+ */
+class MyQueue {
+        
+    
+    private int MAX_SIZE = 100;
+    private int queueSize;
+    private int[] queueData;
+    private int queueHead;
+    private int queueTale;
+    private int currentSize;
+
+    {
+        queueData = new int[MAX_SIZE];
+        queueSize = 0;
+        queueHead = 0;
+        queueTale = 0;
+    }
+
+    public void enqueue(int element) {
+        ++queueSize;
+        ++queueTale;
+        queueData[queueTale++] = element;
+    }
+
+    public int dequeue() {
+        int currentSize;
+        int headData = queueData[queueHead];
+        queueSize--;
+        queueHead++;
+        return headData;
+
+    }
+
+    public int peek() {
+        return queueData[queueHead];
+    }
+
+    public int getSize() {
+        return currentSize;
+    }
+
+    public void cleer() {
+        currentSize = 0;
+        queueTale = 0;
+        queueHead = 0;
+    }
+
+    public boolean isEmpty() {
+        return currentSize == 0;
+    }
+    
+    public boolean isFull() {
+        return currentSize == MAX_SIZE;
+    }
+    
+}
