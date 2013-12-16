@@ -1,0 +1,29 @@
+package grafic.pkginterface;
+
+public class SDA1612 {
+
+    public static void main(String[] args) {
+        String longString = "a12345cd99999SSSX1qp3";
+        int i,n;
+        String result = "";
+        String omg;
+        String newChar;
+        char c;
+        n = longString.length();
+        
+        for (i = 0; i < n; i++) {
+            c = longString.charAt(i);
+            if ( c >= '0' && c <= '9')  {
+                newChar = Character.toString(c);
+                result = result + newChar;
+            }
+            else {
+                if {
+                    
+                }
+                System.out.println(result);
+                result = "";
+            }
+        }
+    }
+}
